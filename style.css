@@ -2,14 +2,104 @@ html {
   height: 100%;
   width: 100%;
 }
+
 * {
   margin: 0;
   padding: 0;
+  opacity: 1;
+  animation-name: fade-in;
+  animation-duration: 1s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade-out {
+  from {
+    opacity: 1;
+    display:block;
+  }
+  to {
+    opacity: 0;
+    display:none;
+  }
+}
+
+.fadingin {
+  animation: fade-in 0.3s;
+}
+
+.fadingout {
+  animation: fade-out 0.3s;
 }
 
 #toptitle {
-  background-color: aqua;
-  padding: 2rem;
+  
+  width: 100%;
+  padding: 0.6rem;
   text-align: center;
   margin: 0%;
+  color: white;
+  
+}
+
+#sameline {
+  width: 100%;
+  display: flex;
+  background-color: rgb(108, 50, 190);
+}
+
+#menu-icon {
+  text-align: center;
+  width: 60px;
+  min-width: 60px;
+  margin-right: 0.5%;
+  margin:auto;
+  user-select: none;
+}
+#dropdowncontent {
+  left:auto;
+  right: 0;
+  padding: 0.3%;
+  display: none;
+  position: absolute;
+}
+#dropdowncontent > * {
+  background-color: rgb(232, 251, 242);
+  z-index: 1;
+  border: 0.8rem ridge transparent;
+  outline-width: 0.1rem;
+  outline-style: solid;
+  outline-color: black;
+}
+#dropdowncontent > *:hover {
+  border-right: 0.8rem ridge black;
+  box-shadow: -5px 3px 5px 3px black;
+}
+
+#main {
+  background-color: white;
+  border-style: ridge;
+  border-width: 0.625rem;
+  border-color: white;
+  background-color: aquamarine;
+  padding: 1rem;
+  margin: 0%;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color:blue
+}
+
+a:visited {
+  color: blue;
 }
