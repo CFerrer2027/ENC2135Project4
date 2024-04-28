@@ -111,6 +111,11 @@ html, body {
   margin: 0%;
 }
 
+#main > embed {
+  padding-left: calc((100% - 500px)/2);
+  padding-right: calc((100% - 500px)/2)
+}
+
 a {
   text-decoration: none;
   color:blue;
