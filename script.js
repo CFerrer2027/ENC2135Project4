@@ -13,5 +13,3 @@ function menuClick(element, string) {
         
     }
 } 
-
-

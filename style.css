@@ -1,14 +1,15 @@
-html {
+html, body {
   height: 100%;
   width: 100%;
+  min-height: 100%;
 }
 
 * {
   margin: 0;
   padding: 0;
   opacity: 1;
-  animation-name: fade-in;
-  animation-duration: 1s;
+  z-index: 0;
+  animation: fade-in 1s;
 }
 
 @keyframes fade-in {
@@ -31,15 +32,14 @@ html {
 }
 
 .fadingin {
-  animation: fade-in 0.3s;
+  animation: fade-in 0.5s;
 }
 
 .fadingout {
-  animation: fade-out 0.3s;
+  animation: fade-out 0.5 s;
 }
 
 #toptitle {
-  
   width: 100%;
   padding: 0.6rem;
   text-align: center;
@@ -51,16 +51,34 @@ html {
 #sameline {
   width: 100%;
   display: flex;
-  background-color: rgb(108, 50, 190);
+  position:fixed;
+  animation: fade-in 1s;
+  z-index: 1;
+}
+
+#divider {
+  padding: 1.2rem;
+}
+
+#divider, #sameline {
+  /* background-color: #E25B1D; */
+  background-color: #782F40;
 }
 
 #menu-icon {
+  right: 0%;
+  top: 0.6rem;
+  position: absolute;
   text-align: center;
   width: 60px;
   min-width: 60px;
   margin-right: 0.5%;
-  margin:auto;
+  margin:0;
   user-select: none;
+}
+
+#menu-icon > i {
+  color:white;
 }
 #dropdowncontent {
   left:auto;
@@ -71,11 +89,11 @@ html {
 }
 #dropdowncontent > * {
   background-color: rgb(232, 251, 242);
-  z-index: 1;
-  border: 0.8rem ridge transparent;
-  outline-width: 0.1rem;
   outline-style: solid;
   outline-color: black;
+  outline-width: 0.1rem;
+  border: 0.8rem ridge transparent;
+  animation: fade-in 0.5s;
 }
 #dropdowncontent > *:hover {
   border-right: 0.8rem ridge black;
@@ -87,19 +105,76 @@ html {
   border-style: ridge;
   border-width: 0.625rem;
   border-color: white;
-  background-color: aquamarine;
+  /* background-color:#1DA4E2; */
+  background-color: #CEB888;
   padding: 1rem;
   margin: 0%;
 }
 
 a {
   text-decoration: none;
+  color:blue;
 }
 
-a:link {
-  color:blue
+#abouttheauthor {
+  /* background-color: #E25B1D; */
+  /* background-color: #42E21D; */
+  background-color: #f4f4f4;
+  font-size: 20px;
 }
 
-a:visited {
-  color: blue;
+#abouttheauthor > div {
+  width: calc((86% - 2rem)/2.25);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  margin-top: 0;
+  text-align: center;
+}
+
+#heroimage {
+  display:flex;
+  flex-basis: 50%;
+  width: 100%;
+}
+
+#imgdiv {
+  padding: 2rem 0rem 0rem 2rem;
+  margin-left: auto;
+  display: block;
+  width: 80%;
+}
+
+#imgdiv > img {
+  width: 100%;
+  align-self:center;
+  object-fit: contain;
+  aspect-ratio: 1 / 1;
+  float: left;
+}
+
+#innerp {
+  /* padding-top: 2rem; */
+  padding-left: 7%;
+  padding-right: 7%;
+  width: 100%;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#main > p, h1{
+  text-align: center;
+}
+
+#main > p{
+  font-size: 1.2em;
+  margin-right: 15%;
+  margin-left: 15%;
+}
+
+#tiktokban {
+  width: 40%;
+  padding-left: 30%;
+  padding-right: 30%;
 }
