@@ -44,7 +44,7 @@ html, body {
   padding: 0.6rem;
   text-align: center;
   margin: 0%;
-  color: white;
+  /* color: white; */
 }
 
 #sameline {
@@ -99,7 +99,7 @@ html, body {
 #main {
   border-style: ridge;
   border-width: 0.625rem;
-  border-color: white;
+  /* border-color: white; */
   padding: 1rem;
   margin: 0%;
 }
@@ -188,11 +188,25 @@ input {
 .defaultgarnet {
   background-color: #782F40;
 }
+
+.defaultwhite {
+  color: white;
+}
+
 .defaultgold {
   background-color: #CEB888;
+  color: black;
+}
+
+.defaultblack1 {
+  color: black;
 }
 .defaultgray {
   background-color: #f4f4f4;
+  color:black;
+}
+.defaultblack2 {
+  color: black;
 }
 
 .circularchoose {
