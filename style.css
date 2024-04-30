@@ -4,7 +4,7 @@ html, body {
   min-height: 100%;
 }
 
-* {
+*:not(input) {
   margin: 0;
   padding: 0;
   opacity: 1;
@@ -45,7 +45,6 @@ html, body {
   text-align: center;
   margin: 0%;
   color: white;
-  
 }
 
 #sameline {
@@ -58,11 +57,6 @@ html, body {
 
 #divider {
   padding: 1.2rem;
-}
-
-#divider, #sameline {
-  /* background-color: #E25B1D; */
-  background-color: #782F40;
 }
 
 #menu-icon {
@@ -80,6 +74,7 @@ html, body {
 #menu-icon > i {
   color:white;
 }
+
 #dropdowncontent {
   margin-right: 5%;
   left:auto;
@@ -102,12 +97,9 @@ html, body {
 }
 
 #main {
-  background-color: white;
   border-style: ridge;
   border-width: 0.625rem;
   border-color: white;
-  /* background-color:#1DA4E2; */
-  background-color: #CEB888;
   padding: 1rem;
   margin: 0%;
 }
@@ -123,9 +115,6 @@ a {
 }
 
 #abouttheauthor {
-  /* background-color: #E25B1D; */
-  /* background-color: #42E21D; */
-  background-color: #f4f4f4;
   font-size: 20px;
 }
 
@@ -183,4 +172,44 @@ a {
   width: 40%;
   padding-left: 30%;
   padding-right: 30%;
+}
+
+input[type=color] {
+  position: relative;
+  left: -2.5rem;
+  opacity: 0;
+  width: 1%;
+}
+
+input {
+  margin: 0.4rem;
+}
+
+.defaultgarnet {
+  background-color: #782F40;
+}
+.defaultgold {
+  background-color: #CEB888;
+}
+.defaultgray {
+  background-color: #f4f4f4;
+}
+
+.circularchoose {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  border-style: solid;
+  border-color: black;
+  border-radius: 2px;
+  border-radius: 50%;
+  vertical-align: middle;
+  line-height: 100px;
+  text-align: center;
+  user-select: none;
+  margin-right: 2%;
+}  
+
+#colpicks, #coldefaults {
+  padding-left: 10%;
 }
